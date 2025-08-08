@@ -1,0 +1,8 @@
+[app]
+name = "macroquad-survival"
+stylized-name = "Macroquad Survival"
+identifier = "com.example.macroquadsurvival"
+template-pack = "winit"
+
+[apple]
+development-team = "KHT3VCJDF6"

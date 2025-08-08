@@ -7,6 +7,7 @@ const LASER_LENGTH: f32 = 15.0;
 const PLAYER_SPEED: f32 = 200.0;
 const ENEMY_SPEED: f32 = 50.0;
 const LASER_SPEED: f32 = 400.0;
+const FIRE_RATE: f32 = 0.3; // Time between shots in seconds
 
 #[derive(Clone)]
 struct Player {
@@ -36,7 +37,9 @@ struct Game {
     lasers: Vec<Laser>,
     score: i32,
     enemy_spawn_timer: f32,
+    fire_timer: f32,
     game_over: bool,
+    game_time: f32,
 }
 
 impl Game {
@@ -51,7 +54,9 @@ impl Game {
             lasers: Vec::new(),
             score: 0,
             enemy_spawn_timer: 0.0,
+            fire_timer: 0.0,
             game_over: false,
+            game_time: 0.0,
         }
     }
 
@@ -60,7 +65,9 @@ impl Game {
             return;
         }
 
+        self.game_time += dt;
         self.update_player(dt);
+        self.auto_fire(dt);
         self.update_lasers(dt);
         self.update_enemies(dt);
         self.spawn_enemies(dt);
@@ -100,18 +107,43 @@ impl Game {
         // Keep player on screen
         self.player.x = self.player.x.clamp(PLAYER_SIZE / 2.0, screen_width() - PLAYER_SIZE / 2.0);
         self.player.y = self.player.y.clamp(PLAYER_SIZE / 2.0, screen_height() - PLAYER_SIZE / 2.0);
+    }
 
-        // Shoot laser towards mouse
-        if is_mouse_button_pressed(MouseButton::Left) {
-            let (mouse_x, mouse_y) = mouse_position();
-            let angle = (mouse_y - self.player.y).atan2(mouse_x - self.player.x);
+    fn auto_fire(&mut self, dt: f32) {
+        self.fire_timer += dt;
+        
+        if self.fire_timer >= FIRE_RATE && !self.enemies.is_empty() {
+            self.fire_timer = 0.0;
             
-            self.lasers.push(Laser {
-                x: self.player.x,
-                y: self.player.y,
-                dx: angle.cos(),
-                dy: angle.sin(),
-            });
+            // Find the nearest enemy
+            let mut nearest_enemy_idx = 0;
+            let mut nearest_distance = f32::MAX;
+            
+            for (idx, enemy) in self.enemies.iter().enumerate() {
+                let dx = enemy.x - self.player.x;
+                let dy = enemy.y - self.player.y;
+                let distance = (dx * dx + dy * dy).sqrt();
+                
+                if distance < nearest_distance {
+                    nearest_distance = distance;
+                    nearest_enemy_idx = idx;
+                }
+            }
+            
+            // Shoot at the nearest enemy
+            let target = &self.enemies[nearest_enemy_idx];
+            let dx = target.x - self.player.x;
+            let dy = target.y - self.player.y;
+            let distance = (dx * dx + dy * dy).sqrt();
+            
+            if distance > 0.0 {
+                self.lasers.push(Laser {
+                    x: self.player.x,
+                    y: self.player.y,
+                    dx: dx / distance,
+                    dy: dy / distance,
+                });
+            }
         }
     }
 
@@ -144,7 +176,13 @@ impl Game {
     fn spawn_enemies(&mut self, dt: f32) {
         self.enemy_spawn_timer += dt;
         
-        if self.enemy_spawn_timer > 2.0 {
+        // Calculate dynamic spawn interval based on game time
+        // Starts at 2.0 seconds, decreases over time with diminishing returns
+        // Formula: 2.0 * exp(-time/30) + 0.3
+        // This means spawn rate goes from 2s -> ~0.3s over time
+        let spawn_interval = 2.0 * (-self.game_time / 30.0).exp() + 0.3;
+        
+        if self.enemy_spawn_timer > spawn_interval {
             self.enemy_spawn_timer = 0.0;
             
             // Spawn enemy at random edge of screen
@@ -262,7 +300,7 @@ impl Game {
         draw_text(&format!("Health: {}", self.player.health), 10.0, 30.0, 20.0, WHITE);
         draw_text(&format!("Score: {}", self.score), 10.0, 55.0, 20.0, WHITE);
         draw_text("Use WASD/Arrow keys to move", 10.0, screen_height() - 40.0, 16.0, GRAY);
-        draw_text("Click to shoot laser at mouse cursor", 10.0, screen_height() - 20.0, 16.0, GRAY);
+        draw_text("Auto-firing at nearest enemy", 10.0, screen_height() - 20.0, 16.0, GRAY);
     }
 }
 
