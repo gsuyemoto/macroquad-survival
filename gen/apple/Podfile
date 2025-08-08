@@ -1,0 +1,17 @@
+# Uncomment the next line to define a global platform for your project
+
+target 'macroquad-survival_iOS' do
+platform :ios, '13.0'
+  
+
+  # Pods for macroquad-survival_iOS
+  
+end
+
+target 'macroquad-survival_macOS' do
+platform :osx, '11.0'
+  
+
+  # Pods for macroquad-survival_macOS
+  
+end

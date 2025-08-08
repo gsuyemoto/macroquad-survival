@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12C3E16806AC01BEFBDC0480 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D362A8C7D692CD3196540CD /* UIKit.framework */; };
+		28766197D195EAA3EE01C7E9 /* libmacroquad_survival.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC4EEEBE649027860570B246 /* libmacroquad_survival.a */; };
+		323317BCB3096A9D79D7FDF1 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 805E871C7654D00E6B826C5D /* main.mm */; };
+		6D098A64B64C394ACFFD7897 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17373C2B6C23E7F5DFE2379F /* MetalKit.framework */; };
+		7E15163DB69A7402705DD81E /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D444E20017F7E9E2C7AC1 /* assets */; };
+		9CFF062EF957C93F976EB7F7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB1113769801655B0CBD46EC /* QuartzCore.framework */; };
+		AF7E2BF4556CF47E2D71E9EB /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FC65D822808EB165D740F80 /* Metal.framework */; };
+		E9D3B94F0209573E0D4E56FF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF022F1EA89BD7325A05D0D5 /* Security.framework */; };
+		F4C30B547F58A992E97D4405 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 541CAC447AAA11D7BF6DBC0E /* CoreGraphics.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		05D2957F7FB9C22981A1329E /* lib.rs */ = {isa = PBXFileReference; path = lib.rs; sourceTree = "<group>"; };
+		17373C2B6C23E7F5DFE2379F /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		25D1915927B613F673F114C3 /* main.rs:2:5 */ = {isa = PBXFileReference; path = "main.rs:2:5"; sourceTree = "<group>"; };
+		4D362A8C7D692CD3196540CD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4F4D444E20017F7E9E2C7AC1 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = SOURCE_ROOT; };
+		4F916BA6E58B0CC3DD5FA847 /* bindings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bindings.h; sourceTree = "<group>"; };
+		541CAC447AAA11D7BF6DBC0E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5FC65D822808EB165D740F80 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		805E871C7654D00E6B826C5D /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		AB1113769801655B0CBD46EC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D838486B6975A9932B89E10C /* macroquad-survival_iOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "macroquad-survival_iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC4EEEBE649027860570B246 /* libmacroquad_survival.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmacroquad_survival.a; sourceTree = "<group>"; };
+		FBA7F28926C2BE60362C414E /* main.rs */ = {isa = PBXFileReference; path = main.rs; sourceTree = "<group>"; };
+		FF022F1EA89BD7325A05D0D5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2C2FB4679C361E4A39592BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28766197D195EAA3EE01C7E9 /* libmacroquad_survival.a in Frameworks */,
+				F4C30B547F58A992E97D4405 /* CoreGraphics.framework in Frameworks */,
+				AF7E2BF4556CF47E2D71E9EB /* Metal.framework in Frameworks */,
+				6D098A64B64C394ACFFD7897 /* MetalKit.framework in Frameworks */,
+				9CFF062EF957C93F976EB7F7 /* QuartzCore.framework in Frameworks */,
+				E9D3B94F0209573E0D4E56FF /* Security.framework in Frameworks */,
+				12C3E16806AC01BEFBDC0480 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E0C1605D5E270B9DF50DAD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				541CAC447AAA11D7BF6DBC0E /* CoreGraphics.framework */,
+				DC4EEEBE649027860570B246 /* libmacroquad_survival.a */,
+				5FC65D822808EB165D740F80 /* Metal.framework */,
+				17373C2B6C23E7F5DFE2379F /* MetalKit.framework */,
+				AB1113769801655B0CBD46EC /* QuartzCore.framework */,
+				FF022F1EA89BD7325A05D0D5 /* Security.framework */,
+				4D362A8C7D692CD3196540CD /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3397FC5EBF23D08839E71F35 = {
+			isa = PBXGroup;
+			children = (
+				4F4D444E20017F7E9E2C7AC1 /* assets */,
+				F309D77C214662F9275C03D3 /* Sources */,
+				AE0FAF722888E9E7C8A8DD43 /* src */,
+				2E0C1605D5E270B9DF50DAD0 /* Frameworks */,
+				DA8ED9377BB552C153C516EA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		97C2F95BC82A0A9F97DA8B2C /* macroquad-survival */ = {
+			isa = PBXGroup;
+			children = (
+				805E871C7654D00E6B826C5D /* main.mm */,
+				FD376A688661341595A9BA84 /* bindings */,
+			);
+			path = "macroquad-survival";
+			sourceTree = "<group>";
+		};
+		AE0FAF722888E9E7C8A8DD43 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				05D2957F7FB9C22981A1329E /* lib.rs */,
+				FBA7F28926C2BE60362C414E /* main.rs */,
+				25D1915927B613F673F114C3 /* main.rs:2:5 */,
+			);
+			name = src;
+			path = ../../src;
+			sourceTree = "<group>";
+		};
+		DA8ED9377BB552C153C516EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D838486B6975A9932B89E10C /* macroquad-survival_iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F309D77C214662F9275C03D3 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				97C2F95BC82A0A9F97DA8B2C /* macroquad-survival */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		FD376A688661341595A9BA84 /* bindings */ = {
+			isa = PBXGroup;
+			children = (
+				4F916BA6E58B0CC3DD5FA847 /* bindings.h */,
+			);
+			path = bindings;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C85C50F4984DFD8AC1E1A65A /* macroquad-survival_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1A2275C66024E078DDE9FF2 /* Build configuration list for PBXNativeTarget "macroquad-survival_iOS" */;
+			buildPhases = (
+				33ACAE105261D9322E19515C /* Build Rust Code */,
+				5260E94A88B637D54A6E2DAD /* Sources */,
+				53286D55C7591B651E125987 /* Resources */,
+				E2C2FB4679C361E4A39592BD /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "macroquad-survival_iOS";
+			packageProductDependencies = (
+			);
+			productName = "macroquad-survival_iOS";
+			productReference = D838486B6975A9932B89E10C /* macroquad-survival_iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1750C11FC94545B6EE211AB8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					C85C50F4984DFD8AC1E1A65A = {
+						DevelopmentTeam = KHT3VCJDF6;
+					};
+				};
+			};
+			buildConfigurationList = F8EB363320B862B46D8D3412 /* Build configuration list for PBXProject "macroquad-survival" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 3397FC5EBF23D08839E71F35;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C85C50F4984DFD8AC1E1A65A /* macroquad-survival_iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		53286D55C7591B651E125987 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E15163DB69A7402705DD81E /* assets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33ACAE105261D9322E19515C /* Build Rust Code */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build Rust Code";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/target/aarch64-apple-ios/${CONFIGURATION}/deps/libmacroquad_survival.a",
+				"$(SRCROOT)/target/x86_64-apple-ios/${CONFIGURATION}/deps/libmacroquad_survival.a",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PATH=${PATH}:${HOME:?}/.cargo/bin\nCARGO_APPLE=`which cargo-apple`\n${CARGO_APPLE} xcode-script -v --platform \"${PLATFORM_DISPLAY_NAME:?}\" --sdk-root ${SDKROOT:?} --framework-search-paths \"${FRAMEWORK_SEARCH_PATHS:?}\" --header-search-paths \"${HEADER_SEARCH_PATHS:?}\" --gcc-preprocessor-definitions \"${GCC_PREPROCESSOR_DEFINITIONS:?}\" --configuration ${CONFIGURATION:?} ${FORCE_COLOR} ${ARCHS:?} ${FEATURES}";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5260E94A88B637D54A6E2DAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				323317BCB3096A9D79D7FDF1 /* main.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		177342890240C086159E98E9 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ARCHS = (
+					arm64,
+				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = KHT3VCJDF6;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\".\"",
+				);
+				INFOPLIST_FILE = "macroquad-survival_iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "$(inherited) $(PROJECT_DIR)/Sources/aarch64-apple-ios/$(CONFIGURATION)";
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(inherited) \"/Users/gary/Documents/workspace-games/macroquad-survival/target/aarch64-apple-ios-sim/$(CONFIGURATION)\"";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.macroquadsurvival;
+				PRODUCT_NAME = "Macroquad Survival";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = arm64;
+			};
+			name = debug;
+		};
+		22744309CB3DF40001E6BC43 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = debug;
+		};
+		2AF1624DD1FD782CDEC48F03 /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ARCHS = (
+					arm64,
+				);
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = KHT3VCJDF6;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\".\"",
+				);
+				INFOPLIST_FILE = "macroquad-survival_iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "$(inherited) $(PROJECT_DIR)/Sources/aarch64-apple-ios/$(CONFIGURATION)";
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(inherited) \"/Users/gary/Documents/workspace-games/macroquad-survival/target/aarch64-apple-ios-sim/$(CONFIGURATION)\"";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.macroquadsurvival;
+				PRODUCT_NAME = "Macroquad Survival";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = arm64;
+			};
+			name = release;
+		};
+		37877ADC581067C65E265CFC /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1A2275C66024E078DDE9FF2 /* Build configuration list for PBXNativeTarget "macroquad-survival_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				177342890240C086159E98E9 /* debug */,
+				2AF1624DD1FD782CDEC48F03 /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+		F8EB363320B862B46D8D3412 /* Build configuration list for PBXProject "macroquad-survival" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22744309CB3DF40001E6BC43 /* debug */,
+				37877ADC581067C65E265CFC /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1750C11FC94545B6EE211AB8 /* Project object */;
+}
